@@ -26,3 +26,5 @@ NameError: global name 'EditProfileFOrm' is not defined
 2018-04-05 12:02:03,094 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
 2018-04-05 12:06:55,452 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
 2018-04-05 12:32:51,636 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 12:53:37,661 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 12:53:56,474 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
