@@ -1,0 +1,28 @@
+2018-04-05 11:27:33,673 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 11:28:21,097 ERROR: Exception on /edit_profile [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 80, in edit_profile
+    form = EditProfileForm(current_user.username)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/forms.py", line 35, in __init__
+    super(EditProfileFOrm, self).__init__(*args, **kwargs)
+NameError: global name 'EditProfileFOrm' is not defined
+2018-04-05 11:28:40,806 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 12:00:30,392 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 12:01:47,823 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 12:02:03,094 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 12:06:55,452 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 12:32:51,636 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
