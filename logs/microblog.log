@@ -1,5 +1,4 @@
-2018-04-05 11:27:33,673 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 11:28:21,097 ERROR: Exception on /edit_profile [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
+2018-04-05 14:20:02,092 ERROR: Exception on /user/nick [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -13,18 +12,41 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 80, in edit_profile
-    form = EditProfileForm(current_user.username)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/wtforms/form.py", line 212, in __call__
-    return type.__call__(cls, *args, **kwargs)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/forms.py", line 35, in __init__
-    super(EditProfileFOrm, self).__init__(*args, **kwargs)
-NameError: global name 'EditProfileFOrm' is not defined
-2018-04-05 11:28:40,806 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 12:00:30,392 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 12:01:47,823 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 12:02:03,094 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 12:06:55,452 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 12:32:51,636 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 12:53:37,661 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 12:53:56,474 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 75, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/base.html", line 36, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/user.html", line 11, in block "content"
+    <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+UndefinedError: 'users' is undefined
+2018-04-05 14:20:10,565 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-05 14:20:22,337 ERROR: Exception on /follow/nick2 [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 95, in follow
+    user = User.filter_by(username=username).first()
+AttributeError: type object 'User' has no attribute 'filter_by'
+2018-04-05 14:20:55,482 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
