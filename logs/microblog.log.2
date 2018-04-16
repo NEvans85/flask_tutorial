@@ -1,4 +1,4 @@
-2018-04-05 14:20:02,092 ERROR: Exception on /user/nick [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
+2018-04-08 10:45:21,501 ERROR: Exception on /explore [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,93 +12,77 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 75, in user
-    return render_template('user.html', user=user, posts=posts)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 124, in explore
+    page = request.args('page', 1, type=int)
+TypeError: 'ImmutableMultiDict' object is not callable
+2018-04-08 10:46:08,149 ERROR: Exception on /index [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 27, in index
+    posts = current_user.followed_posts().paginate(page,app.config['POSTS_PER_PAGE'],Flase)
+NameError: global name 'Flase' is not defined
+2018-04-08 10:46:23,874 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-08 10:46:28,321 ERROR: Exception on /explore [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 124, in explore
+    page = request.args('page', 1, type=int)
+TypeError: 'ImmutableMultiDict' object is not callable
+2018-04-08 10:46:56,333 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-08 10:54:44,281 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+2018-04-08 10:54:48,713 ERROR: Exception on /index [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 30, in index
+    return render_template('index.html', title="Home", form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
   File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/base.html", line 36, in top-level template code
-    {% block content %}{% endblock %}
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/user.html", line 11, in block "content"
-    <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-UndefinedError: 'users' is undefined
-2018-04-05 14:20:10,565 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-05 14:20:22,337 ERROR: Exception on /follow/nick2 [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 95, in follow
-    user = User.filter_by(username=username).first()
-AttributeError: type object 'User' has no attribute 'filter_by'
-2018-04-05 14:20:55,482 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:15:33,773 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:15:44,992 ERROR: Exception on / [GET] [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/routes.py", line 36, in index
-    return render_template('index.html', title="Home", form=form, posts=posts)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/index.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/base.html", line 36, in top-level template code
-    {% block content %}{% endblock %}
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/index.html", line 8, in block "content"
-    {{ from.post.label }}<br>
-  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/venv/lib/python2.7/site-packages/jinja2/environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-UndefinedError: 'from' is undefined
-2018-04-06 10:17:05,394 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:18:30,799 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:23:06,970 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:28:03,284 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:30:46,634 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:31:15,469 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:31:43,164 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:40:12,355 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:43:59,030 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:46:08,001 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:47:40,448 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:50:03,960 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 10:54:10,134 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 11:01:15,485 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-06 11:19:37,500 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-08 10:34:29,617 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-08 10:34:32,782 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
-2018-04-08 10:45:15,480 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
+  File "/Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/templates/index.html", line 28, in template
+    {% endblock %}
+TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2018-04-08 11:02:32,350 INFO: Microblog startup [in /Users/nicholasevans/DevProjects/Python_Projects/Flaskr/app/__init__.py:43]
